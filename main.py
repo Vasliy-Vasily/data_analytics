@@ -1,17 +1,44 @@
+import argparse
+
 from data_input import get_data
 from statistics import define_approach
 
 
-def main():
-    print("STATISTICS ANALISYS OF A/B TEST")
-    print(
-        "ENTER THE DATA AND ITS CHARACTERISTICS, "
-        "AND THE PROGRAM WILL DEFINE THE CORRECT "
-        "STATISTICAL APPROACH AND WILL APPLY IT"
+def parse_arguments(): #Command line processing
+    parser = argparse.ArgumentParser(
+        description="Статистический анализ A/B теста"
     )
 
-    df, number_of_groups, number_of_data, k = get_data()
-    define_approach(df, number_of_groups, number_of_data, k)
+    parser.add_argument(
+        "--file",
+        type=str,
+        required=True,
+        help="Путь к CSV-файлу"
+    )
+
+    parser.add_argument(
+        "--type",
+        choices=["categorical", "quantitative"],
+        required=True,
+        help="Тип данных"
+    )
+
+    return parser.parse_args()
+
+
+def main():
+    print("СТАТИСТИЧЕСКИЙ АНАЛИЗ A/B ТЕСТА\n")
+
+    args = parse_arguments()
+
+    df, number_of_groups, number_of_data, k = get_data(args)
+
+    define_approach(
+        df,
+        number_of_groups,
+        number_of_data,
+        k
+    )
 
 
 if __name__ == "__main__":
