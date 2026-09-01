@@ -7,6 +7,7 @@ from tests import has_outliers
 from tests import is_normal
 
 
+# Define statistical approach
 def define_approach(df, number_of_groups, number_of_data, k):
     if k == 1:
         if number_of_groups == 2 and number_of_data == 2:
