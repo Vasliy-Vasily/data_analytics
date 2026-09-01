@@ -1,3 +1,4 @@
+# Creating a function to round data to tabular values
 def round_to_table_value(value, available_values):
     if value <= available_values[0]:
         return available_values[0]
