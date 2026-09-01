@@ -10,7 +10,7 @@ from critical_values import (
 )
 
 
-# Проверяем наличие выбросов
+# Checking for outliers
 def has_outliers(df, number_of_groups, number_of_data):
     if number_of_data < 4:
         return False
@@ -30,7 +30,7 @@ def has_outliers(df, number_of_groups, number_of_data):
         return False
 
 
-# Проверяем нормальность распределения
+# Checking for normality of the distribution
 def is_normal(df, number_of_groups, number_of_data):
     skew = 0
     s = 0
@@ -61,7 +61,7 @@ def is_normal(df, number_of_groups, number_of_data):
     return True
 
 
-# Z-тест
+# Z-test
 def z_test(df, number_of_groups, number_of_data):
     pooled = 0
     se = 0
@@ -96,7 +96,7 @@ def z_test(df, number_of_groups, number_of_data):
         print("Выберите число 1 или 2")
 
 
-# Критерий хи-квадрат
+# Chi-square test
 def xi_crit(df, number_of_groups, number_of_data):
     sum = 0
     degfr = 0
@@ -122,7 +122,7 @@ def xi_crit(df, number_of_groups, number_of_data):
         print("Разница статистически не значима. Нет оснований отвергнуть нулевую гипотезу.")
 
 
-# T-тест
+# T-test
 def welch_t_test(df, number_of_groups, number_of_data):
     avg1 = 0
     avg2 = 0
@@ -150,7 +150,7 @@ def welch_t_test(df, number_of_groups, number_of_data):
         print("Разница статистически не значима. Нет оснований отвергнуть нулевую гипотезу.")
 
 
-# Метод АНОВА
+# ANOVA method
 def anova(df, number_of_groups, number_of_data):
     avg = []
     ssw = 0
@@ -185,7 +185,7 @@ def anova(df, number_of_groups, number_of_data):
         print("Разница статистически не значима. Нет оснований отвергнуть нулевую гипотезу.")
 
 
-# Критерий Краскела-Уоллиса
+# Kruskal-Wallis test
 def kruskal_wallis(df, number_of_groups, number_of_data):
     rang = []
     for i in range(number_of_groups):
