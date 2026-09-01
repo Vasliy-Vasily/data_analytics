@@ -3,11 +3,11 @@ from statistics import define_approach
 
 
 def main():
-    print("СТАТИСТИЧЕСКИЙ АНАЛИЗ A/B ТЕСТА")
+    print("STATISTICS ANALISYS OF A/B TEST")
     print(
-        "ВВЕДИТЕ ДАННЫЕ И ИХ ХАРАКТЕРИСТИКИ, "
-        "А ПРОГРАММА ОПРЕДЕЛИТ ВЕРНЫЙ "
-        "СТАТИСТИЧЕСКИЙ ПОДХОД И ПРИМЕНИТ ЕГО"
+        "ENTER THE DATA AND ITS CHARACTERISTICS, "
+        "AND THE PROGRAM WILL DEFINE THE CORRECT "
+        "STATISTICAL APPROACH AND WILL APPLY IT"
     )
 
     df, number_of_groups, number_of_data, k = get_data()
