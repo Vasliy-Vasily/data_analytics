@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-def get_data():  # Получаем структуру данных и сами данные от пользователя
+def get_data():  # Get the data structure and the data itself from the user
     k = None
     c = None
     data = None
