@@ -1,7 +1,7 @@
 from utils import round_to_table_value
 
 
-#Таблица для перехода от Z к p-value
+#Table for converting Z to p-value
 def z_table(z):
     available_z = [
         0.00, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09,
@@ -135,7 +135,7 @@ def z_table(z):
     return p
 
 
-#Таблица для сравнения с критическим значением
+#Table for comparison with the critical value
 def xi_table(freedom_degree):
     available_degfr = []
     for i in range(50):
@@ -163,7 +163,7 @@ def xi_table(freedom_degree):
     return chi2_critical_table[freedom_degree]
 
 
-#Таблица для сравнения с критическим значением
+#Table for comparison with the critical value
 def t_table(freedom_degree):
     available_degfr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 50, 60, 100, 1000]
     freedom_degree = round_to_table_value(freedom_degree, available_degfr)
@@ -179,7 +179,7 @@ def t_table(freedom_degree):
     return critical_values[freedom_degree]
 
 
-#Таблица для сравнения с критическим значением
+#Table for comparison with the critical value
 def f_table(freedom_degree1, freedom_degree2):
     available_degfr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20, 30, 60, 120, 1000]
     available_degfr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20, 30, 60, 120, 1000]
@@ -259,7 +259,7 @@ def f_table(freedom_degree1, freedom_degree2):
     return f_critical_table[freedom_degree1][freedom_degree2]
 
 
-#Таблица для сравнения с критическим значением
+#Table for comparison with the critical value
 def h_table(freedom_degree):
     available_degfr = []
     for i in range(100):
