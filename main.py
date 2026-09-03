@@ -2,7 +2,7 @@ import argparse
 
 from data_input import get_data
 from statistics import define_approach
-from unit_tests import result
+from unit_tests import unit_test_result
 
 
 def parse_arguments(): #Command line processing
@@ -36,7 +36,7 @@ def parse_arguments(): #Command line processing
 
 
 def main():
-    if result() == False:
+    if unit_test_result() == False:
         print('Programm can not run with errors')
     else:
         print("STATISTICAL ANALYSIS OF AN A/B TEST")
