@@ -2,43 +2,48 @@ import argparse
 
 from data_input import get_data
 from statistics import define_approach
+from unit_tests import result
 
 
 def parse_arguments(): #Command line processing
     parser = argparse.ArgumentParser(
-        description="Статистический анализ A/B теста"
+        description="Statistical analysis of an A/B test"
     )
-
     parser.add_argument(
         "--file",
         type=str,
         required=True,
-        help="Путь к CSV-файлу"
+        help="Path to the CSV file"
     )
-
     parser.add_argument(
         "--type",
         choices=["categorical", "quantitative"],
         required=True,
-        help="Тип данных"
+        help="Data type"
     )
-
+    parser.add_argument(
+        "--column",
+        type=int,
+        choices=[1, 2],
+        help="Data category number for the Z-test"
+    )
+    parser.add_argument(
+        "--alternative",
+        choices=["one-sided", "two-sided"],
+        help="Hypothesis type for the Z-test"
+    )
     return parser.parse_args()
 
 
 def main():
-    print("СТАТИСТИЧЕСКИЙ АНАЛИЗ A/B ТЕСТА\n")
-
-    args = parse_arguments()
-
-    df, number_of_groups, number_of_data, k = get_data(args)
-
-    define_approach(
-        df,
-        number_of_groups,
-        number_of_data,
-        k
-    )
+    if result() == False:
+        print('Programm can not run with errors')
+    else:
+        print("STATISTICAL ANALYSIS OF AN A/B TEST")
+        print()
+        args = parse_arguments()
+        df, number_of_groups, number_of_data, k = get_data(args)
+        define_approach(df, number_of_groups, number_of_data, k, args.column, args.alternative)
 
 
 if __name__ == "__main__":
