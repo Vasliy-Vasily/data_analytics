@@ -112,15 +112,15 @@ For categorical data, the program calculates the Total column automatically, so 
 
 # Running the Application
 
-For categorical data:
+- For categorical data:
 
 python main.py --file data.csv --type categorical
 
-For quantitative data:
+- For quantitative data:
 
 python main.py --file data.csv --type quantitative
 
-For Z-test:
+- For Z-test:
 
 When the data contains two groups and two categories, the program uses a Z-test to compare conversion rates.
 For example:
@@ -143,8 +143,8 @@ means that the first category will be analyzed.
 
 Two alternatives are supported:
 
-- one-sided
-- two-sided
+one-sided;
+two-sided.
 
 ---
 
