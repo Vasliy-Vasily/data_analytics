@@ -5,6 +5,8 @@ The program accepts data from a CSV file, determines an appropriate statistical 
 and reports whether the observed difference is statistically significant.
 This project was created for educational purposes to practice Python, statistical analysis, Pandas, hypothesis testing, and modular software design.
 
+---
+
 # Features
 
 - Load data from CSV files
@@ -19,6 +21,8 @@ This project was created for educational purposes to practice Python, statistica
 - Distribution normality checking
 - Unit tests for statistical functions
 - Command-line interface
+
+---
 
 # How It Works
 
@@ -41,17 +45,21 @@ For quantitative data, the program additionally checks:
 
 These checks are used to select either a parametric or a non-parametric statistical method.
 
+---
+
 #  Statistical Methods
 
-| Data type    | Conditions                                           | Method              |
+| Data type | Conditions | Method |
+|-----------|------------|--------|
+| Categorical | 2 groups × 2 categories | Z-test |
+| Categorical | More complex contingency table | χ² test |
+| Quantitative | 2 groups, normal distribution, no outliers | Welch’s t-test |
+| Quantitative | More than 2 groups, normal distribution, no outliers | ANOVA |
+| Quantitative | Non-normal distribution or outliers | Kruskal–Wallis test |
 
-| Categorical  | 2 groups × 2 categories                              | Z-test              |
-| Categorical  | More complex contingency table                       | χ² test             |
-| Quantitative | 2 groups, normal distribution, no outliers           | Welch's t-test      |
-| Quantitative | More than 2 groups, normal distribution, no outliers | ANOVA               |
-| Quantitative | Non-normal distribution or outliers                  | Kruskal–Wallis test |
+The application selects a statistical approach according to the structure of the input data.
 
-The application therefore selects a statistical approach according to the structure of the input data.
+---
 
 # Project Structure
 
@@ -75,11 +83,15 @@ The project is divided into separate modules responsible for:
 4) testing
 5) application execution
 
+---
+
 # To make the code work, you need to install the libraries: 
 
 1) pandas
 2) numpy
 3) os
+
+---
 
 # Example of categorical data
 
@@ -95,6 +107,8 @@ Bought is the number of users who performed the target action;
 Did not buy is the number of users who did not perform the target action.
 
 For categorical data, the program calculates the Total column automatically, so you do not need to add this column to the data yourself.
+
+---
 
 # Running the Application
 
@@ -132,6 +146,8 @@ Two alternatives are supported:
 - one-sided
 - two-sided
 
+---
+
 # Unit Tests
 
 The project contains a separate unit_tests.py module with test datasets and checks for the statistical functions.
@@ -149,6 +165,8 @@ Run the unit tests with:
 
 python main.py --file data.csv --type categorical --unit-test
 
+---
+
 # What This Project Demonstrates
 
 This project provides practice with several areas of Python and data analysis:
@@ -164,6 +182,8 @@ critical value tables;
 command-line interfaces;
 unit testing.
 
+---
+
 # Limitations
 
 This is an educational project and is not intended to replace professional statistical software.
@@ -174,6 +194,8 @@ statistical power;
 significance level (in this programm it is equal to 0.05);
 multiple comparisons;
 assumptions of the selected statistical test.
+
+---
 
 # Possible Improvements
 
@@ -189,6 +211,8 @@ Future versions could include:
  add logging;
  add requirements.txt;
  improve the unit test structure.
+
+---
 
 # Author
 
