@@ -149,7 +149,7 @@ def unit_test_result():
     if unit_test_welch_t() == False:
         print("Welch t test code has an error")
     if unit_test_kruskal_wallis() == False:
-        print("Kruskal_Wallis test code has an error")
+        print("Kruskal Wallis test code has an error")
     if unit_test_anova() == False:
         print("ANOVA test code has an error")
     if unit_test_is_normal() == False:
