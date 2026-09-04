@@ -63,6 +63,7 @@ The application selects a statistical approach according to the structure of the
 
 # Project Structure
 
+```
 data_analytics/
 │
 ├── main.py              # Application entry point and CLI argument parsing
@@ -74,14 +75,15 @@ data_analytics/
 ├── utils.py             # Utility functions
 │
 └── data.csv             # Input CSV file
+```
 
 The project is divided into separate modules responsible for:
 
-1) input data
-2) statistical logic
-3) statistical tests
-4) testing
-5) application execution
+1. Input data  
+2. Statistical logic  
+3. Statistical tests  
+4. Testing  
+5. Application execution
 
 ---
 
