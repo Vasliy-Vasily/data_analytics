@@ -115,33 +115,45 @@ For categorical data, the program calculates the Total column automatically, so 
 # Running the Application
 
 - For categorical data:
-
+- 
+'''
 python main.py --file data.csv --type categorical
+'''
 
 - For quantitative data:
 
+'''
 python main.py --file data.csv --type quantitative
+'''
 
 - For Z-test:
 
 When the data contains two groups and two categories, the program uses a Z-test to compare conversion rates.
 For example:
 
+'''
 python main.py --file data.csv --type categorical --column 1 --alternative one-sided
+'''
 
 or:
 
+'''
 python main.py --file data.csv --type categorical --column 1 --alternative two-sided
 --column
+'''
 
 Specifies which category should be analyzed.
 For example:
 
+'''
 --column 1
+'''
 
 means that the first category will be analyzed.
 
+'''
 --alternative
+'''
 
 Two alternatives are supported:
 
@@ -163,9 +175,12 @@ Kruskal–Wallis test;
 normality checking;
 outlier detection.
 
+Unit tests can be run separately from data analysis.
 Run the unit tests with:
 
-python main.py --file data.csv --type categorical --unit-test
+'''
+python main.py --unit-test
+'''
 
 ---
 
