@@ -1,3 +1,5 @@
+[Русская версия](#статистический-анализ-ab-теста)
+
 # Statistical Analysis of an A/B Test
 
 A command-line Python application for statistical analysis of A/B test results.
@@ -246,6 +248,8 @@ https://github.com/Vasliy-Vasily
 Программа принимает данные из CSV-файла, определяет подходящий статистический тест в зависимости от типа данных и структуры эксперимента, выполняет необходимые расчёты
 и сообщает, является ли наблюдаемое различие статистически значимым.
 Проект создан в образовательных целях для практики Python, статистического анализа, Pandas, проверки гипотез и модульной организации кода.
+
+[English version](#statistical-analysis-of-an-ab-test)
 
 ---
 
